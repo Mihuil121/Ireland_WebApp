@@ -5,8 +5,8 @@ import { Robot } from "../font/fonts";
 import { useEffect } from "react";
 import Link from "next/link";
 import { useDispatch, useSelector } from "react-redux";
-import { counterSlice } from '../../Store/Counter/counterSlice'; 
-import { RootState } from '../../Store/store'; 
+import { counterSlice } from '../../Store/Counter/counterSlice';
+import { RootState } from '../../Store/store';
 
 const SerchMenu: React.FC = () => {
   const dispatch = useDispatch();
@@ -14,8 +14,8 @@ const SerchMenu: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      dispatch(counterSlice.actions.setIsScrolled(window.scrollY > 50)); 
-    }
+      dispatch(counterSlice.actions.setIsScrolled(window.scrollY > 50));
+    };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, [dispatch]);
@@ -28,7 +28,7 @@ const SerchMenu: React.FC = () => {
             {Blok.id !== 6 ? (
               <p>{Blok.name}</p>
             ) : (
-              <Link href={`${Blok.url}`}>
+              <Link href={`Blok.url`}>
                 <p>{Blok.name}</p>
               </Link>
             )}
