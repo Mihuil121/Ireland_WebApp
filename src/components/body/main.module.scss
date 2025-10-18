@@ -1,0 +1,71 @@
+$fontAndBottom: -1rem;
+$WAndH: 20rem;
+
+.maiAndVideo {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  margin-top: -6rem;
+  padding-top: 6rem;
+  
+  .backgrounVideo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+  }
+  
+  .blokIrland {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    margin-left: 4rem;
+    gap: 0;
+    
+    .borederGreen {
+      background-color: #2ecc71;
+      width: 1rem;
+      height: $WAndH - 10;
+      border-radius: 0.3rem 0 0 0.3rem;
+    }
+    
+    .bloked {
+      display: flex;
+      flex-direction: column;
+      border: 1px rgba(255, 255, 255, 0.2) solid;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+      width: $WAndH + 5;
+      height: $WAndH - 10;
+      justify-content: center;
+      border-radius: 0 0.3rem 0.3rem 0;
+      
+      h1 {
+        font-size: 5rem;
+        margin-top: 0;
+        margin-bottom: $fontAndBottom;
+        margin-left: 1rem;
+      }
+      
+      p {
+        font-size: 1.5rem;
+        margin-left: 1rem;
+        margin-top: 0.5rem;
+      }
+    }
+  }
+}
