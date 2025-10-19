@@ -1,62 +1,51 @@
-$menu-gap: 8rem;
+ $menu-gap: 8rem;
 $menu-padding-vertical: 2rem;
 $menu-padding-horizontal: 0;
-
-// немного увеличил прозрачность, чтобы текст был виден на светлом фоне
-$menu-bg-color: rgba(255, 255, 255, 0.6);
+$menu-bg-color:rgba(255, 255, 255, 0.1);
 $menu-bg-color-scrolled: rgba(49, 49, 49, 0.95);
-
 $menu-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-$menu-shadow-scrolled: 0 2px 10px rgba(0, 0, 0, 0.7);
+$menu-shadow-scrolled: 0 2px 10px rgba(0, 0, 0, 0.707);
 $menu-z-index: 1000;
-
 $text-color-default: #000000;
 $text-color-scrolled: #ffffff;
 $text-size: 1.5rem;
-
 $hover-opacity: 0.7;
 $transition-speed: 0.3s;
 $content-offset: 6rem;
-
 .articleMenu {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: $menu-gap;
-  padding: $menu-padding-vertical $menu-padding-horizontal;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  backdrop-filter: blur(10px);
-  background: $menu-bg-color;
-  z-index: $menu-z-index;
-  box-shadow: $menu-shadow;
-  transition: all $transition-speed ease;
-
-  p {
-    margin: 0;
-    font-size: $text-size;
-    color: $text-color-default !important; // гарантированно чёрный до скролла
-    cursor: pointer;
-    white-space: nowrap;
-    transition: color $transition-speed ease, opacity $transition-speed ease;
-
-    &:hover {
-      opacity: $hover-opacity;
-    }
-  }
-
-  &.scrolled {
-    background: $menu-bg-color-scrolled;
-    box-shadow: $menu-shadow-scrolled;
-
-    p {
-      color: $text-color-scrolled !important; // белый при скролле
-    }
-  }
+display: flex;
+justify-content: center;
+align-items: center;
+gap: $menu-gap;
+padding: $menu-padding-vertical $menu-padding-horizontal;
+position: fixed;
+top: 0;
+backdrop-filter: blur(10px);
+left: 0;
+width: 100%;
+background: $menu-bg-color;
+z-index: $menu-z-index;
+box-shadow: $menu-shadow;
+transition: all $transition-speed ease;
+p {
+margin: 0;
+font-size: $text-size;
+color: $text-color-default;
+cursor: pointer;
+white-space: nowrap;
+transition: all $transition-speed ease;
+&:hover {
+opacity: $hover-opacity;
+ }
+ }
+&.scrolled {
+background: $menu-bg-color-scrolled;
+box-shadow: $menu-shadow-scrolled;
+p {
+color: $text-color-scrolled;
+ }
+ }
 }
-
 .mainContent {
-  margin-top: $content-offset;
-}
+margin-top: $content-offset;
+} 
