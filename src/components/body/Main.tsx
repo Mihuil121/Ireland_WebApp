@@ -4,6 +4,7 @@ import style from './main.module.scss'
 import { Robot } from '../font/fonts'
 import { useSelector } from 'react-redux'
 import { RootState } from '../../Store/store'
+import SwiperMain from './Swiper'
 
 const Main: React.FC = () => {
   const isScrolled = useSelector((state: RootState) => state.counter.isScrolled)
@@ -28,13 +29,13 @@ const Main: React.FC = () => {
         <div className={style.blokIrland}>
           <article className={style.borederGreen} />
           <div className={style.bloked}>
-            <h1>Irland</h1>
+            <h1>Ireland</h1>
             <p>sweet green isle</p>
           </div>
         </div>
 
       </main>
-
+      <SwiperMain />
       <div style={{ height: '200vh' }} />
     </div>
   )
