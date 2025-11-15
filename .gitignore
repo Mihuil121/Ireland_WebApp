@@ -39,3 +39,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# .gitignore (добавьте в конец)
+
+# Browser saved pages
+*_files/
+*.html
+!src/**/*.html  # если у вас есть нужные HTML в src
+
+# Browser saved pages
+*_files/
+src/image/*.html
