@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux'
 import { RootState } from '../../Store/store'
 import SwiperMain from './Swiper'
 import FullscreenViewer from './FullscreenViewer'
+import Description from './aboutThisPlace/Description'
 
 const Main: React.FC = () => {
   const isScrolled = useSelector((state: RootState) => state.counter.isScrolled)
@@ -38,7 +39,8 @@ const Main: React.FC = () => {
       </main>
       <SwiperMain />
       <FullscreenViewer />
-      <div style={{ height: '200vh' }} />
+      <Description />
+
     </div>
   )
 }
