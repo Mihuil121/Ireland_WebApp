@@ -4,7 +4,7 @@
 *.ts linguist-detectable=true linguist-language=TypeScript
 *.tsx linguist-detectable=true linguist-language=TypeScript
 
-# JavaScript
+# JavaScript  
 *.js linguist-detectable=true linguist-language=JavaScript
 *.jsx linguist-detectable=true linguist-language=JavaScript
 
@@ -19,7 +19,17 @@ build/** linguist-generated=true
 
 # Ignore vendor files
 node_modules/** linguist-vendored=true
-public/** linguist-vendored=true
 
-# Mark HTML in public as documentation
-public/*.html linguist-documentation=true
+# Ignore media and assets (they shouldn't affect language stats)
+*.mp4 linguist-vendored=true
+*.mkv linguist-vendored=true
+*.svg linguist-vendored=true
+*.png linguist-vendored=true
+*.jpg linguist-vendored=true
+*.jpeg linguist-vendored=true
+*.gif linguist-vendored=true
+*.ico linguist-vendored=true
+*.webp linguist-vendored=true
+
+# Mark public folder as vendored (static assets)
+public/** linguist-vendored=true
