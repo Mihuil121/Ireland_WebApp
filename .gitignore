@@ -50,3 +50,7 @@ next-env.d.ts
 # Browser saved pages
 *_files/
 src/image/*.html
+
+# Browser saved pages
+*_files/
+src/image/*.html
