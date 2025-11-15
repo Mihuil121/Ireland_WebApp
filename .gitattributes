@@ -1,12 +1,25 @@
 # .gitattributes
-*.tsx linguist-language=TypeScript
-*.ts linguist-language=TypeScript
-*.jsx linguist-language=JavaScript
-*.js linguist-language=JavaScript
+
+# TypeScript
+*.ts linguist-detectable=true linguist-language=TypeScript
+*.tsx linguist-detectable=true linguist-language=TypeScript
+
+# JavaScript
+*.js linguist-detectable=true linguist-language=JavaScript
+*.jsx linguist-detectable=true linguist-language=JavaScript
+
+# Styles
 *.scss linguist-detectable=true
 *.css linguist-detectable=true
 
+# Ignore generated files
 .next/** linguist-generated=true
 out/** linguist-generated=true
-public/** linguist-vendored=true
+build/** linguist-generated=true
+
+# Ignore vendor files
 node_modules/** linguist-vendored=true
+public/** linguist-vendored=true
+
+# Mark HTML in public as documentation
+public/*.html linguist-documentation=true
