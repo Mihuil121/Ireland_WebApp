@@ -1,0 +1,12 @@
+# .gitattributes
+*.tsx linguist-language=TypeScript
+*.ts linguist-language=TypeScript
+*.jsx linguist-language=JavaScript
+*.js linguist-language=JavaScript
+*.scss linguist-detectable=true
+*.css linguist-detectable=true
+
+.next/** linguist-generated=true
+out/** linguist-generated=true
+public/** linguist-vendored=true
+node_modules/** linguist-vendored=true
