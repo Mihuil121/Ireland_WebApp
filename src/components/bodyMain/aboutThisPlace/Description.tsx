@@ -16,17 +16,17 @@ const Description: React.FC = () => {
                         pubs where strangers become friends over a pint and a story.
                     </p>
                     <p>
-                        I'm mesmerized by the Irish spirit — warm, genuine, and full of life. 
+                        I&apos;m mesmerized by the Irish spirit — warm, genuine, and full of life. 
                         The landscapes are breathtaking: endless green hills, ancient castles 
                         standing proud against stormy skies, and winding roads that promise 
                         adventure at every turn. The music, the folklore, the literary heritage — 
                         it all speaks to something deep within me.
                     </p>
                     <p>
-                        Ireland isn't just a place on the map. It's a feeling, a connection, 
+                        Ireland isn&apos;t just a place on the map. It&apos;s a feeling, a connection, 
                         a dream I carry in my heart. And one day, I will walk those emerald paths, 
                         breathe that misty air, and finally stand on the land that has called to me 
-                        for so long. Ireland, I'm coming for you.
+                        for so long. Ireland, I&apos;m coming for you.
                     </p>
                 </div>
                 <div className={scss.imageDescription}>

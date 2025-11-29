@@ -7,6 +7,7 @@ import { RootState } from '../../Store/store'
 import SwiperMain from './Swiper'
 import FullscreenViewer from './FullscreenViewer'
 import Description from './aboutThisPlace/Description'
+import ScrollAnimated from '../ScrollAnimated'
 
 const Main: React.FC = () => {
   const isScrolled = useSelector((state: RootState) => state.counter.isScrolled)
@@ -37,9 +38,13 @@ const Main: React.FC = () => {
         </div>
 
       </main>
-      <SwiperMain />
+      <ScrollAnimated id="swiper-block">
+        <SwiperMain />
+      </ScrollAnimated>
       <FullscreenViewer />
-      <Description />
+      <ScrollAnimated id="description-block">
+        <Description />
+      </ScrollAnimated>
 
     </div>
   )

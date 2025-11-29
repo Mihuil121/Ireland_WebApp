@@ -34,8 +34,13 @@ color: $text-color-default;
 cursor: pointer;
 white-space: nowrap;
 transition: all $transition-speed ease;
+user-select: none;
+outline: none;
 &:hover {
 opacity: $hover-opacity;
+ }
+&:focus {
+outline: none;
  }
  }
 &.scrolled {

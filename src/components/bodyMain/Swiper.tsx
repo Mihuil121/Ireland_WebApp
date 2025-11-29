@@ -2,6 +2,7 @@
 import { useRef } from 'react'
 import { useDispatch } from 'react-redux'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import type SwiperType from 'swiper'
 import 'swiper/css'
 import { ObjectPhoto, PhotoItem } from './swipe'
 import Image from 'next/image'
@@ -11,7 +12,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { openFullscreen } from '@/Store/Counter/counterSlice'
 
 const SwiperMain: React.FC = () => {
-  const swiperRef = useRef<any>(null)
+  const swiperRef = useRef<SwiperType | null>(null)
   const dispatch = useDispatch()
 
   const handleImageClick = (photoName: string) => {

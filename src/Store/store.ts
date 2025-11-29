@@ -1,9 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit'
 import counterReducer from './Counter/counterSlice'
+import scrollReducer from './slices/scrollSlice'
+
 
 export const store = configureStore({
     reducer: {
-        counter: counterReducer
+        counter: counterReducer,
+        scroll: scrollReducer
     },
 })
 

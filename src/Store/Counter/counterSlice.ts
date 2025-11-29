@@ -4,13 +4,15 @@ import type { PayloadAction } from "@reduxjs/toolkit";
 export interface CounterState {
   isScrolled: boolean,
   selectedPhotoId: string | null,
-  isFullscreenOpen: boolean
+  isFullscreenOpen: boolean,
+  activeSection: string
 }
 
 const initialState: CounterState = {
   isScrolled: false,
   selectedPhotoId: null,
-  isFullscreenOpen: false
+  isFullscreenOpen: false,
+  activeSection: 'main'
 }
 
 export const counterSlice = createSlice({
@@ -30,10 +32,14 @@ export const counterSlice = createSlice({
     closeFullscreen: (state) => {
       state.selectedPhotoId = null;
       state.isFullscreenOpen = false;
+    },
+
+    setActiveSection: (state, action: PayloadAction<string>) => {
+      state.activeSection = action.payload
     }
   },
 })
 
-export const { setIsScrolled, openFullscreen, closeFullscreen} = counterSlice.actions
+export const { setIsScrolled, openFullscreen, closeFullscreen, setActiveSection} = counterSlice.actions
 
 export default counterSlice.reducer
